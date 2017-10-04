@@ -11,8 +11,8 @@ Adafruit_Sensor
 
 The Adafruit MMA8451 library needs the following changes to use the second i2c bus on the Teensy LC so you can neatly connect them with a 3 pin header and a wire for GND:
 
-`
-$ diff Adafruit_MMA8451_Library/Adafruit_MMA8451.cpp Adafruit_MMA8451_teensy_Library/Adafruit_MMA8451_teensy.cpp 
+
+`$ diff Adafruit_MMA8451_Library/Adafruit_MMA8451.cpp Adafruit_MMA8451_teensy_Library/Adafruit_MMA8451_teensy.cpp 
 3c3
 <     @file     Adafruit_MMA8451.h
 ---
@@ -88,8 +88,7 @@ $ diff Adafruit_MMA8451_Library/Adafruit_MMA8451.cpp Adafruit_MMA8451_teensy_Lib
 >   Wire1.requestFrom(_i2caddr, 6);
 >   x = Wire1.read(); x <<= 8; x |= Wire1.read(); x >>= 2;
 >   y = Wire1.read(); y <<= 8; y |= Wire1.read(); y >>= 2;
->   z = Wire1.read(); z <<= 8; z |= Wire1.read(); z >>= 2;
-`
+>   z = Wire1.read(); z <<= 8; z |= Wire1.read(); z >>= 2;`
 
 The python code requires:
 pyedflib
