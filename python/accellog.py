@@ -125,13 +125,13 @@ class Base():
                 # stupidly copy the channels back in serial format
                 # there must be a better way to do this
                 x = 0
-                for p in range(0, 99):
+                for p in range(0, 100):
                     myList[x] = myX[p]
                     x += 1
-                for p in range(0, 99):
+                for p in range(0, 100):
                     myList[x] = myY[p]
                     x += 1
-                for p in range(0, 99):
+                for p in range(0, 100):
                     myList[x] = myZ[p]
                     x += 1 
                 # write the channels to the edf file
